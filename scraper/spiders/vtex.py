@@ -112,4 +112,4 @@ def save_prices(productos, store_id):
     conn.commit()
     cur.close()
     conn.close()
-    print(f"✅ {len(productos)} productos guardados")
+    print(f"{len(productos)} productos guardados")
