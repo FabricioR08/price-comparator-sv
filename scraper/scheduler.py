@@ -11,7 +11,7 @@ TIENDAS_VTEX = [
 PRODUCTOS = ["arroz", "frijoles", "aceite", "azucar", "leche", "huevos"]
 
 def correr_scraper():
-    print("🤖 Iniciando scraper automático...")
+    print("Iniciando scraper automatico...")
 
     # Super Selectos
     for producto in PRODUCTOS:
@@ -28,12 +28,12 @@ def correr_scraper():
             if productos:
                 save_vtex(productos, tienda["store_id"])
 
-    print("✅ Scraper completo")
+    print("Scraper completo")
 
 schedule.every(6).hours.do(correr_scraper)
 correr_scraper()
 
-print("⏰ Scheduler corriendo... (Ctrl+C para detener)")
+print("Scheduler corriendo... (Ctrl+C para detener)")
 while True:
     schedule.run_pending()
     time.sleep(60)
